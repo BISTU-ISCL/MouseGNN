@@ -1,0 +1,18 @@
+seed: 42
+
+data:
+  # Directory that holds *.npz clips for training/validation
+  train_dir: data/skeletons/train
+  val_dir: data/skeletons/val
+  num_points: 10  # number of keypoints per frame
+  in_channels: 2  # x, y coordinates; set to 3 if you include confidence
+  clip_len: 60
+  stride: 1
+
+training:
+  epochs: 30
+  batch_size: 8
+  num_workers: 4
+  lr: 0.001
+  weight_decay: 0.0005
+  output: runs/stgcn
